@@ -15,6 +15,7 @@ var pageTitle = config.title;
 var fileTypes = config.types;
 var downloadEnabled = config.download_enabled;
 var galleryEnabled = config.gallery_enabled;
+var port = config.port;
 
 var headerContent = fs.readFileSync(__dirname + "/header.html");
 var galleryLink = '<a href="/gallery"><i class="fa fa-picture-o"></i></a>';
@@ -168,4 +169,4 @@ http.createServer(function(req, res) {
 
     res.writeHead(302, {'Location': '/upload'});
     res.end();
-}).listen(8080);
+}).listen(port);
