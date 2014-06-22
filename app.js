@@ -68,7 +68,7 @@ function makeid(){
 http.createServer(function(req, res) {
     var rurl = url.parse(req.url, true,true);
     if (rurl.pathname == '/upload' && req.method.toLowerCase() != 'post') {
-      var template_form = fs.readFileSync(__dirname + "/templates /template.html");
+      var template_form = fs.readFileSync(__dirname + "/templates/template.html");
       res.writeHead(200, {'content-type': 'text/html'});
       var temp = prepareTemplate(template_form);
       res.end(temp);

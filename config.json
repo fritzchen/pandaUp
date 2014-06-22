@@ -7,5 +7,5 @@
 	"types": ["image/jpeg", "image/png", "image/gif"],
 	"download_enabled": "true",
 	"gallery_enabled": "true",
-	"port": "8822"
+	"port": "61010"
 }
