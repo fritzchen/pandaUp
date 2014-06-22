@@ -176,6 +176,6 @@ http.createServer(function(req, res) {
         }
     }
 
-    res.writeHead(302, {'Location': '/upload'});
+    res.writeHead(302, {'Location': baseURL + '/upload'});
     res.end();
 }).listen(port);
