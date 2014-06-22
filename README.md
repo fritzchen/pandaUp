@@ -28,5 +28,7 @@ The config.json should look somewhat like this
     //Whether or not you can access the files from outside the server
     "download_enabled": "true",
     //Enables the gallery-page ("download_enabled" needs to be true)
-    "gallery_enabled": "true"
+    "gallery_enabled": "true",
+    //The port :O
+    "port": "8822"
     }
