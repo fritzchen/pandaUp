@@ -16,10 +16,13 @@ var fileTypes = config.types;
 var downloadEnabled = config.download_enabled;
 var galleryEnabled = config.gallery_enabled;
 var port = config.port;
+var baseURL = config.base_url;
 
 var headerContent = fs.readFileSync(__dirname + "/header.html");
-var galleryLink = '<a href="/gallery"><i class="fa fa-picture-o"></i></a>';
+var galleryLink = '<a href="%base_url%/gallery"><i class="fa fa-picture-o"></i></a>';
 var galleryTypes = ["image/jpeg", "image/png", "image/gif"];
+
+galleryLink = galleryLink.replace('%base_url%', baseURL);
 
 var stringHeader = String(headerContent);
 if(galleryEnabled === 'true'){
@@ -36,6 +39,7 @@ function prepareTemplate(template){
     str = str.replace('%theme_url%', themeUrl);
     str = str.replace('%title%', pageTitle);
     str = str.replace('%header%', headerContent);
+    str = str.replace('%base_url%', baseURL);
     return str;
 }
 
