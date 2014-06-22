@@ -7,5 +7,6 @@
 	"types": ["image/jpeg", "image/png", "image/gif"],
 	"download_enabled": "true",
 	"gallery_enabled": "true",
-	"port": "61010"
+	"port": "61010",
+	"base_url": "someUrl.de"
 }
