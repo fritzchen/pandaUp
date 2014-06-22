@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>%title%</title>
+		<link href="/style" rel="stylesheet" />
+		<link href="%theme_url%" rel="stylesheet" />
+		<link href="%icon_url%" rel="apple-touch-icon"/>
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body hidden>
+		%header%
+		<div id="main">
+			<br /><br /><br />
+			<h1>File uploaded!</h1><h3>(please only upload images!)</h3>
+			<h4>You can find the file under the name <pre>%filename%</pre></h4>
+			<br /><br /><br />
+
+			<a href="/upload" class="bot-con"><button class="btn grad static-bottom">Upload another File!</button></a>	
+		</div>
+		<div class="cpr">
+			<p>
+				<b>push.it</b> was developed by <a href="https://www.twitter.com/fritzchen">@fritzchen</a>
+			</p>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script>
+			setTimeout(function(){
+				$('body').fadeIn();
+			}, 500);
+		</script>
+	</body>
+</html>
