@@ -2,6 +2,9 @@ body{
 	background: #e6e6e6;
 	font-family: Helvetica, Arial;
 }
+h4 a{
+	text-decoration: none;
+}
 
 #main{
 	text-align: center;

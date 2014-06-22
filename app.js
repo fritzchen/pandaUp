@@ -41,6 +41,9 @@ function prepareTemplate(template){
     str = str.replace('%base_url%', baseURL);
     str = str.replace('%base_url%', baseURL);
     str = str.replace('%base_url%', baseURL);
+    str = str.replace('%base_url%', baseURL);
+    str = str.replace('%base_url%', baseURL);
+    str = str.replace('%base_url%', baseURL);
     return str;
 }
 
@@ -93,6 +96,7 @@ http.createServer(function(req, res) {
             var template_info = fs.readFileSync(__dirname + "/templates/template_success.html");
             var fileName = nm + "_" + file.name;
             var str = prepareTemplate(template_info);
+            str = str.replace('%filename%', fileName);
             str = str.replace('%filename%', fileName);
             var temp = str;
             var ur = "/files/" + fileName;
