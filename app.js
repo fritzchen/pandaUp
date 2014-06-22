@@ -82,26 +82,26 @@ http.createServer(function(req, res) {
     form.on('file', function(field, file) {
         console.log(file.type);
 
-    	if(legitFileType(file.type)){
-        	var nm = makeid();
+        if(legitFileType(file.type)){
+            var nm = makeid();
             var template_info = fs.readFileSync(__dirname + "/templates/template_success.html");
             var fileName = nm + "_" + file.name;
             var str = prepareTemplate(template_info);
             str = str.replace('%filename%', fileName);
             var temp = str;
-        	var ur = "/files/" + fileName;
-    	    fs.rename(file.path, __dirname + ur,function(){
-        	    res.writeHead(200, {'content-type': 'text/html'});
-    	      	res.end(temp);
+            var ur = "/files/" + fileName;
+            fs.rename(file.path, __dirname + ur,function(){
+                res.writeHead(200, {'content-type': 'text/html'});
+                res.end(temp);
                 console.log("File saved!");
-        	});    	
-    	}
-    	else{
+            });    	
+        }
+        else{
             var template_error = fs.readFileSync(__dirname + "/templates/template_error.html");
             var temp = prepareTemplate(template_error);
-    	    res.writeHead(200, {'content-type': 'text/html'});
-    	    res.end(temp);
-    	}
+            res.writeHead(200, {'content-type': 'text/html'});
+            res.end(temp);
+        }
 
     });
 
